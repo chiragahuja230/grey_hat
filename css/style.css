@@ -1,322 +1,84 @@
-.header-fixed {
-	background-color:#292c2f;
-	box-shadow:0 1px 1px #ccc;
-	padding: 20px 40px;
-	height: 80px;
-	color: #ffffff;
-	box-sizing: border-box;
-	top:-100px;
-
-	-webkit-transition:top 0.3s;
-	transition:top 0.3s;
-}
-
-.header-fixed .header-limiter {
-	max-width: 1200px;
-	text-align: center;
-	margin: 0 auto;
-}
-
-/*	The header placeholder. It is displayed when the header is fixed to the top of the
-	browser window, in order to prevent the content of the page from jumping up. */
-
-.header-fixed-placeholder{
-	height: 80px;
-	display: none;
-}
-
-/* Logo */
-
-.header-fixed .header-limiter h1 {
-	float: left;
-	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
-	line-height: 40px;
-	margin: 0;
-}
-
-.header-fixed .header-limiter h1 span {
-	color: #5383d3;
-}
-
-/* The navigation links */
-
-.header-fixed .header-limiter a {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-.header-fixed .header-limiter nav {
-	font:16px Arial, Helvetica, sans-serif;
-	line-height: 40px;
-	float: right;
-}
-
-.header-fixed .header-limiter nav a{
-	display: inline-block;
-	padding: 0 5px;
-	text-decoration:none;
-	color: #ffffff;
-	opacity: 0.9;
-}
-
-.header-fixed .header-limiter nav a:hover{
-	opacity: 1;
-}
-
-.header-fixed .header-limiter nav a.selected {
-	color: #608bd2;
-	pointer-events: none;
-	opacity: 1;
-}
-
-/* Fixed version of the header */
-
-body.fixed .header-fixed {
-	padding: 10px 40px;
-	height: 50px;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-body.fixed .header-fixed-placeholder {
-	display: block;
-}
-
-body.fixed .header-fixed .header-limiter h1 {
-	font-size: 24px;
-	line-height: 30px;
-}
-
-body.fixed .header-fixed .header-limiter nav {
-	line-height: 28px;
-	font-size: 13px;
-}
-
-
-/* Making the header responsive */
-
-@media all and (max-width: 600px) {
-
-	.header-fixed {
-		padding: 20px 0;
-		height: 75px;
-	}
-
-	.header-fixed .header-limiter h1 {
-		float: none;
-		margin: -8px 0 10px;
-		text-align: center;
-		font-size: 24px;
-		line-height: 1;
-	}
-
-	.header-fixed .header-limiter nav {
-		line-height: 1;
-		float:none;
-	}
-
-	.header-fixed .header-limiter nav a {
-		font-size: 13px;
-	}
-
-	body.fixed .header-fixed {
-		display: none;
-	}
-
-}
-
-/*
-	 We are clearing the body's margin and padding, so that the header fits properly.
-	 We are also adding a height to demonstrate the scrolling behavior. You can remove
-	 these styles.
- */
-/* 
-body {
-	margin: 0;
-	padding: 0;
-	height: 1500px;
-}
-* {
-  box-sizing: border-box;
-  margin: 0%;
-  padding: 0%;
-}
-  
-
-body {
-  font-family: "Outfit", sans-serif;
-  text-transform: capitalize;
-  background-color:#626161;
-  align-items: center; 
-  justify-content: center;
-} */
-
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  }
-  
-  #search-div{
-  background: #808080;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-  
-  h1 #serach_h1{
+.footer {
   position: absolute;
-  top: 30%;
-  font-size: 60px;
-  color: white;
-  }
-  
-  .box {
-  width: 500px;
-  height: 50px;
-  background-color: white;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  }
-  
-  .box>i {
-  font-size: 20px;
-  color: #777;
-  }
-  
-  .box>input {
-  flex: 1;
-  height: 40px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  padding-left: 10px;
-  }
-
-footer {
-  background-color: rgb(58, 58, 58);
-  /* margin-top: 300px; */
-}
-.container {
-  margin-left: 150px;
-  margin-right: 150px;
-}
-.container .content {
-  display: flex;
-  padding: 50px;
-  justify-content: space-between;
-}
-.container .content .col {
-  display: flex;
-  flex-direction: column;
-}
-.container .content p:first-child:not(.flex p:first-child) {
-  color: white;
-  font-size: 22px;
-}
-.container .content p:not(.col, .column p:first-child) {
-  color: rgb(136, 136, 136);
-  margin-bottom: 10px;
-}
-.container .content .col:first-child {
-  gap: 25px;
-}
-.container .content .col:first-child .flex {
-  display: flex;
-  gap: 50px;
-}
-.container .content .col:first-child .flex .col-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.container .content .col:first-child .flex .col-info p {
-  font-size: 14px;
-}
-.container .content .col:first-child .flex .col-info span {
-  color: white;
-  font-size: 17px;
-}
-.container .content .col .column:first-child {
-  margin-right: 50px;
-}
-
-.container .content .col .column p:first-child {
-  margin-bottom: 25px;
-}
-.container .content .col .column p:not(p:first-child) {
-  margin-bottom: 12px;
-}
-.container .content .col:last-child {
-  gap: 15px;
-}
-.container .content .col:last-child .email {
-  display: flex;
-}
-.container .content .col:last-child .email input {
-  width: 300px;
-  height: 40px;
-  font-size: 17px;
-  color: white;
-  background-color: rgb(76, 76, 76);
-  padding-left: 10px;
-  border: 0;
-  outline: 0;
-}
-.container .content .col:last-child .email button {
-  width: 200px;
-  height: 40px;
-  color: white;
-  background-color: rgb(229, 39, 39);
-  padding-left: 10px;
-  border: 0;
-  outline: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #111;
   text-align: center;
-  margin-left: -30px;
-  font-weight: bold;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-}
-.container .content .col:last-child .social {
-  display: flex;
-  gap: 20px;
-}
-.container .content .col:last-child .social img {
-  width: 40px;
-}
-.content-foot {
-  background-color: rgb(43, 43, 43);
-}
- .content-foot .foot-text{
-  padding: 25px 80px;
-  display: flex;
-  justify-content: space-between;
-}
-.content-foot .container p {
-  color: rgb(136, 136, 136);
-}
-.content-foot .container p span {
-  color: white;
-  font-weight: bold;
-}
-.content-foot .container .pay {
-  display: flex;
-  gap: 20px;
-}
-.content-foot .container .pay img {
-  width: 70px;
-  height: 40px;
-  object-fit: contain;
-  background-color: white;
-  padding: 10px 5px;
 }
 
+.container{
+  margin-top: 50px;
+  /* color: #fff; */
+  width: 100%;
+}
+
+.fa-twitter {
+    color: #4099FF;
+}
+
+.fa-facebook {
+    color: #3B5998;
+}
+
+.fa-youtube-play {
+    color: #e52d27;
+}
+
+.fa-rss {
+    color: #FF6600;
+}
+
+.fa-vine {
+    color: #00a478;
+}
+
+.fa-flickr {
+    color: #ff0084;
+}
+
+.fa-twitch {
+    color: #6441A5;
+}
+
+.fa-linkedin {
+    color: #007bb6;
+}
+
+.fa {
+    opacity: 0.7;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+.fa:hover{
+    opacity: 1;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.h1-center{
+    text-align: center;
+    color: #111;
+}
+.form-control-borderless {
+    border: none;
+}
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.resource{
+    margin-bottom: 100px;
+}
+hr{
+    /* color: #111; */
+    border: none;
+    height: 7px;
+    background: black;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+footer{
+    background-color: rgb(126, 124, 124)
+}

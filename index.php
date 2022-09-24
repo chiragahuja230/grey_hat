@@ -1,161 +1,38 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<?php
-// require "function.php";
-// $ssl_result=Ssl_check('https://www.google.com/');
+<?php 
+require('header.php');
 ?>
-<<!DOCTYPE html>
-<html>
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Basic Header</title>
-
-  <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="assets/header-fixed.css"> -->
-  <link href='https://fonts.googleapis.com/css?family=' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/seach.css">
-
-</head>
-
-<body>
-
-<header class="header-fixed">
-
-  <div class="header-limiter">
-
-    <h1><a href="#">TheGrey<span>Hat</span></a></h1>
-
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-
-  </div>
-
-</header>
-<div id="search-div">
-    <h1 id="serach_h1">Enter your url to analyse</h1>
-    <div class="sub">
-        <i class="fa-brands fa-searching"></i>
-        <input type="text" name="url" id="url">
-        <input type="submit" name="submit" onclick="check();" value="Analyse">
-        <p id="result"></p>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<div class="container">
+  <h1 class="h1-center">Type Your Url to find bugs.</h1>
+      <br/>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fas fa-search h4 text-body"></i>
+          </div>
+        <div class="col">
+          <input class="form-control form-control-lg form-control-borderless" type="text" name="url" id="url" placeholder="Enter Your URL">
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-lg btn-success" onclick="check()">Search</button>
+        </div>
+      </div>
+      <p id="result"></p>
     </div>
+  </div>
 </div>
-    
-<footer>
-  <div class="container">
-    <div class="content">
-      ⁡⁢⁣⁣ ⁡
-      <div class="col">
-        <p>contact us</p>
-        <p>
-          hi, we are always open for cooperation and suggestions, <br />
-          contact us in one of the ways below:
-        </p>
-        <div class="flex">
-          <div class="col-info">
-            <p>
-              PHONE NUMBER <br />
-              <span>+91 8866310671</span>
-            </p>
-          </div>
-          <div class="col-info">
-            <p>
-              EMAIL ADDRESS <br />
-              <span>mihirchaudhary2507@gmail.com</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      ⁡⁢⁣⁡⁢⁣⁣ ⁡
-      <div class="col">
-        <div class="column">
-          <p>information</p>
-          <p>About Us</p>
-          <p>contact us</p>
-        </div>
-      </div>
-      ⁡⁢⁣⁣ ⁡
-      <div class="col">
-        
-        <p>follow us on social networks:</p>
-        <div class="social">
-          <img src="https://i.postimg.cc/44pPB9wk/facebook.png" alt="" />
-          <img src="https://i.postimg.cc/L8Q3nB4f/twitter.png" alt="" />
-          <img src="https://i.postimg.cc/TYG9S3Hy/instagram.png" alt="" />
-          <img src="https://i.postimg.cc/kGCxkTwr/youtube.png" alt="" />
-          <img src="https://i.postimg.cc/CKZHDBd2/telegram.png" alt="" />
-        </div>
-      </div>
-      ⁡⁢⁡⁢⁣⁣
-    </div>
-  </div>
-  <div class="content-foot">
-    <!--<div class="container">
-      <div class="foot-text">
-        <p>powered by <span>tech</span> - designed by <span>hema</span></p>
-        <div class="pay">
-          <img src="https://i.postimg.cc/PrtWyFPY/visa-logo-png-2013.png" alt="" />
-          <img src="https://i.postimg.cc/R0j1TSHZ/mastercard-PNG23.png" alt="" />
-          <img src="https://i.postimg.cc/sggJj0zs/paypal-logo-png-2119.png" alt="" />
-          <img src="https://i.postimg.cc/hjdsFzBm/American-Express-logo-PNG14.png" alt="" />
-        </div>
-      </div>-->
-    </div>
-  </div>
-</footer>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div>
+<a href="resource.php"><h1 class="h1-center">Know how to secure.</h1></a>
+</div>
+<ul>
+  <li><a href="resource.php?type="></a></li>
+</ul>
 <script>
-
-  $(document).ready(function(){
-
-    var showHeaderAt = 150;
-
-    var win = $(window),
-        body = $('body');
-
-    // Show the fixed header only on larger screen devices
-
-    if(win.width() > 400){
-
-      // When we scroll more than 150px down, we set the
-      // "fixed" class on the body element.
-
-      win.on('scroll', function(e){
-
-        if(win.scrollTop() > showHeaderAt) {
-          body.addClass('fixed');
-        }
-        else {
-          body.removeClass('fixed');
-        }
-      });
-
-    }
-
-  });
-
-</script>
-
-
-
-</body>
-
-</html>
-
-<script>
-  // $( document ).ready(function() {
     function check(){
       var url=$('#url').val();
+      console.log(url);
+      $('#result').text("");
       $.ajax({
         url: 'ssl_certificate.php',
         type: 'post',
@@ -163,14 +40,32 @@
         success: function(response) {
           if(response==true){
             $('#result').text("Great your website has an ssl certificate");
-            // alert(response);
+            $('#result').css('color','green');
+            $.ajax({
+              url:'insert_result.php',
+              type:'post',
+              data:{"result":response,"url":url},
+              success: function(res){
+                console.log(res);
+              }
+            });
           }else{
             $('#result').text(  "Sorry your website does not have an ssl certificate");
-            // alert('not');
+            $('#result').css('color','red');
+            $.ajax({
+              url:'insert_result.php',
+              type:'post',
+              data:{"result":0,"url":url},
+              success: function(res){
+                console.log(res);
+              }
+            });
           }
+
         }
       });
     }
-    
-// });
 </script>
+<?php 
+require('footer.php');
+?>
